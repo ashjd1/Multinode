@@ -60,7 +60,7 @@ pipeline
 
                 sh'pwd'
 
-                sh'cd first/'
+                sh'#cd first/'
 
                 sh'pwd'
 
