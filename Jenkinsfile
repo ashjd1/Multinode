@@ -64,11 +64,11 @@ pipeline
 
                 sh'pwd'
 
-                sh 'chmod 777 first/script.sh'
+                sh 'chmod 777 Multinode1/script.sh'
 
                 sh'pwd'
 
-                sh'./first/script.sh'
+                sh'./Multinode1/script.sh'
 
             }
 
