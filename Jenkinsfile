@@ -28,7 +28,7 @@ pipeline
 
                 sh'rm -rf first'
 
-                sh'git clone https://github.com/ashjd1/-Multinode1.git'
+                sh'git clone https://github.com/ashjd1/Multinode1.git'
 
                 sh 'echo "multi-node-demo-1"'
 
