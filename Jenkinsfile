@@ -26,7 +26,7 @@ pipeline
 
                 sh'git init'
 
-                sh'rm -rf first'
+                sh'rm -rf Multinode1'
 
                 sh'git clone https://github.com/ashjd1/Multinode1.git'
 
