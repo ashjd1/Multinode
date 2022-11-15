@@ -3,7 +3,7 @@ pipeline
    agent any
     stages
     {
-        stage('My VM')
+       stage('Ashutosh VM stage')
         {
            agent
             {
@@ -11,13 +11,13 @@ pipeline
             }
             steps
             {
-                sh'rm -rf Multinode1'
-                sh'git clone https://github.com/ashjd1/Multinode1.git'
-                sh 'echo "multi-node-demo-1"'
-                stash(name: 'source')
+               sh 'echo "This is my VM"'
+               sh'rm -rf Multinode1'
+               sh'git clone https://github.com/ashjd1/Multinode1.git'
+               stash(name: 'source')
             }
         }
-      stage('shubham VM')
+      stage('Shubham VM stage')
         {
             agent
             {
@@ -25,7 +25,7 @@ pipeline
             }
             steps
             {
-                sh 'echo "multi-node-demo-2"'
+                sh 'echo "This is shubham VM"'
                 unstash(name: 'source')
                 sh 'chmod 777 Multinode1/script.sh'
                 sh'./Multinode1/script.sh'
