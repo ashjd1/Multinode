@@ -8,7 +8,7 @@ pipeline
 
     {
 
-        stage('stage 1')
+        stage('My VM')
 
         {
 
@@ -16,7 +16,7 @@ pipeline
 
             {
 
-                label 'myvm'
+                label 'ashu-vm-node-1'
 
             }
 
@@ -33,41 +33,22 @@ pipeline
                 sh 'echo "multi-node-demo-1"'
 
                 stash(name: 'source')
-
             }
-
         }
-
-        stage('stage 2')
-
+      stage('shubham VM')
         {
-
             agent
-
             {
-
-                label 'withother'
-
+               label 'ashu-VM-node-2'
             }
-
             steps
-
             {
-
-                sh 'echo "multi-node-demo-2"'
-
+              sh 'echo "multi-node-demo-2"'
                 unstash(name: 'source')
-
-                sh'pwd'
-
                 sh'#cd first/'
-
                 sh'pwd'
-
                 sh 'chmod 777 Multinode1/script.sh'
-
                 sh'pwd'
-
                 sh'./Multinode1/script.sh'
 
             }
