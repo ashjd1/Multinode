@@ -32,5 +32,16 @@ pipeline
                 sh'./Multinode1/script.sh'
             }
         }
+       stage('Ashu-node-1')
+        {
+           agent
+            {
+                label 'ashu-node-1'
+            }
+            steps
+            {
+               sh 'echo "This is internal node"'
+            }
+        }
     }
 }
