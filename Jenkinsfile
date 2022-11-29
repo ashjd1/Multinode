@@ -12,6 +12,7 @@ pipeline
             steps
             {
                sh 'echo "This is my VM."'
+               sh 'echo "This is for trial"'
                sh'rm -rf Multinode1'
                sh'git clone https://github.com/ashjd1/Multinode1.git'
                stash(name: 'source')
